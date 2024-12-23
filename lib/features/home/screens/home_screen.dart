@@ -1,8 +1,9 @@
- import 'package:amazon_clone/providers/user_provider.dart';
+import 'package:amazon_clone/providers/user_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../../constants/global_variable.dart';
+import '../../search/screen/search_screen.dart';
 import '../widgets/adress_box.dart';
 import '../widgets/carousel_widget.dart';
 import '../widgets/deal_of_the_day.dart';
@@ -15,6 +16,9 @@ class HomeScreen extends StatefulWidget{
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  void navigateToSearchScreen(String query) {
+    Navigator.pushNamed(context, SearchScreen.routeName,arguments: query);
+  }
   @override
   Widget build(BuildContext context) {
     final user=Provider.of<UserProvider>(context).user;
@@ -38,9 +42,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     borderRadius: BorderRadius.circular(7),
                     elevation: 1,
                     child: TextFormField(
+                      onFieldSubmitted: navigateToSearchScreen,
                       decoration: InputDecoration(
                         prefixIcon: InkWell(
-                          onTap: (){},
+                          onTap: (){
+
+                          },
                           child: Padding(padding: EdgeInsets.only(left: 6),
                           child: Icon(Icons.search,color: Colors.black,size: 23,),),
                         ),

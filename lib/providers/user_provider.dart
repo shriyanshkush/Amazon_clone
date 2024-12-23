@@ -10,6 +10,7 @@ class UserProvider extends ChangeNotifier {
     type: "",
     address: "",
     token: "",
+    cart: [],
   );
 
   User get user => _user;
@@ -21,5 +22,9 @@ class UserProvider extends ChangeNotifier {
     } catch (e) {
       print("error getting user:$e");
     }
+  }
+  void setUserfromModel(User user) {
+    _user=user;
+    notifyListeners();
   }
 }

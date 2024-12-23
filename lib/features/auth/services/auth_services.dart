@@ -22,7 +22,7 @@ class AuthServices {
     required String name,
 }) async{
     try{
-      User user =User(id: " ", name: name, email:email,password: password, type: " ", address:  " ", token: " ");
+      User user =User(id: " ", name: name, email:email,password: password, type: " ", address:  " ", token: " ", cart: []);
       http.Response res = await http.post(Uri.parse("$uri/api/signup"),body:json.encode(user.toMap()),
         headers: <String, String>{
           'Content-Type': 'application/json; charset=UTF-8',
@@ -43,7 +43,7 @@ class AuthServices {
     required String password,
   }) async{
     try{
-      User user =User(id: " ", name: " ", email:email,password: password, type: " ", address:  " ", token: " ");
+      User user =User(id: " ", name: " ", email:email,password: password, type: " ", address:  " ", token: " ",cart: []);
       http.Response res = await http.post(Uri.parse("$uri/api/signin"),body:json.encode(user.toMap()),
         headers: <String, String>{
           'Content-Type': 'application/json; charset=UTF-8',

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
+  final Color? color;
   final String text;
   final VoidCallback onTap;
 
-  const CustomButton({Key? key, required this.text, required this.onTap}) : super(key: key);
+  const CustomButton({Key? key, required this.text, required this.onTap,this.color}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,9 +13,10 @@ class CustomButton extends StatelessWidget {
       onPressed: onTap,
       child: Text(
         text,
-        style: TextStyle(color: Colors.white),
+        style: TextStyle(color: color==null?Colors.white:Colors.black),
       ),
       style: ElevatedButton.styleFrom(
+        backgroundColor: color,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8.0), // Adjust for rounded corners
         ),

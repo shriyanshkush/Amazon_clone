@@ -1,7 +1,10 @@
+import 'package:amazon_clone/features/cart/screens/cart_screen.dart';
 import 'package:amazon_clone/features/home/screens/home_screen.dart';
+import 'package:amazon_clone/providers/user_provider.dart';
 import 'package:badges/badges.dart' as badges;
 import 'package:amazon_clone/constants/global_variable.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../../features/account/screens/account_screen.dart';
 
@@ -25,10 +28,12 @@ class _BottomBarState extends State<BottomBar> {
   List<Widget>pages=[
     HomeScreen(),
     AccountScreen(),
-    Center(child: Text("Cart Page",style: TextStyle(fontSize: 30),),),
+    CartScreen(),
   ];
   @override
   Widget build(BuildContext context) {
+    final cartLen=context.watch<UserProvider>().user.cart.length;
+
     return Scaffold(
       body: pages[_page],
       bottomNavigationBar: BottomNavigationBar(
@@ -89,7 +94,7 @@ class _BottomBarState extends State<BottomBar> {
                   badgeColor: Colors.white
                 ),
                 badgeContent: Text(
-                  '1', // or any number to display inside the badge
+                  cartLen.toString(), // or any number to display inside the badge
                   style: TextStyle(color: Colors.black),
                 ),
                 child: Icon(Icons.shopping_cart_outlined),
