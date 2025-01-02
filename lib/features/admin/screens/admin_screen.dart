@@ -1,7 +1,9 @@
+import 'package:amazon_clone/features/admin/screens/order_screen.dart';
 import 'package:amazon_clone/features/admin/screens/posts_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:badges/badges.dart' as badges;
 import '../../../constants/global_variable.dart';
+import 'analytics_screen.dart';
 
 class AdminScreen extends StatefulWidget {
   @override
@@ -21,8 +23,8 @@ class _AdminScreenState extends State<AdminScreen> {
 
   List<Widget>pages=[
     PostsScreen(),
-    Center(child: Text("analytics Page",style: TextStyle(fontSize: 30),),),
-    Center(child: Text("Cart Page",style: TextStyle(fontSize: 30),),),
+    AnalyticsScreen(),
+    OrderScreen(),
   ];
   @override
   Widget build(BuildContext context) {

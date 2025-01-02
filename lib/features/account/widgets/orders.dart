@@ -1,6 +1,9 @@
 import 'package:amazon_clone/constants/global_variable.dart';
+import 'package:amazon_clone/features/account/account_services.dart';
 import 'package:amazon_clone/features/account/widgets/single_product.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:amazon_clone/features/order/screen/order_details.dart';
+import 'package:amazon_clone/models/order_model.dart';
+import 'package:flutter/material.dart';
 
 class Orders extends StatefulWidget {
   @override
@@ -8,16 +11,27 @@ class Orders extends StatefulWidget {
 }
 
 class _OrdersState extends State<Orders> {
+  final AccountServices accountServices =AccountServices();
+  List<Order>? orders;
 
-  List list=[
-    "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8TmF0dXJlfGVufDB8fDB8fHww",
-    "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8TmF0dXJlfGVufDB8fDB8fHww",
-    "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8TmF0dXJlfGVufDB8fDB8fHww",
-    "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8TmF0dXJlfGVufDB8fDB8fHww",
-  ];
+  @override
+  void initState() {
+    super.initState();
+    getOrders();
+  }
+
+  void getOrders() async{
+    orders=await accountServices.fetchAllOrders(context);
+    setState(() {
+
+    });
+    print(orders);
+  }
+
+
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return orders==null?const CircularProgressIndicator():Column(
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -37,9 +51,13 @@ class _OrdersState extends State<Orders> {
           padding: EdgeInsets.only(left: 10,top: 20,right: 0),
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
-            itemCount: list.length,
+            itemCount: orders!.length,
             itemBuilder: ((context,index){
-              return SingleProduct(image: list[index]);
+              return GestureDetector(
+                onTap: (){
+                  Navigator.pushNamed(context, OrderDetails.routeName,arguments: orders![index]);
+                },
+                  child: SingleProduct(image: orders![index].products[0].images[0]));
           }),
           ),
         ),

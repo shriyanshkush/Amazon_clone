@@ -26,9 +26,9 @@ class AccountButton extends StatelessWidget {
             backgroundColor: Colors.black12.withOpacity(0.03),
             shape: RoundedRectangleBorder(
               borderRadius:BorderRadius.circular(30),
-            )
+            ),
           ),
-            onPressed: (){},
+            onPressed: onTap,
             child: Text(text,style: TextStyle(color: Colors.black,fontWeight: FontWeight.normal),)),
       ),
     );
