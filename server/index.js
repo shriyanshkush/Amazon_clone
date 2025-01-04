@@ -11,7 +11,7 @@ const userRouter=require('./routes/user.js')
 
 
 //INIT
-const port=3000;
+const port= process.env.PORT || 3000;
 const app=express();
 const DB="mongodb+srv://Shriyansh:Shriyansh123@cluster0.gx7tm.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
