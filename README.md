@@ -44,52 +44,94 @@ A fully functional e-commerce platform built using **Flutter**, **Node.js**, and
 
 ### Server (Node.js & Express)
 
-server/
-├── middlewares/
-│   ├── admin.js
-│   └── auth.js
-├── models/
-│   ├── order.js
-│   ├── product.js
-│   ├── rating.js
-│   └── user.js
-├── routes/
-│   ├── admin.js
-│   ├── auth.js
-│   ├── product.js
-│   └── user.js
-├── index.js
-├── package.json
-├── package-lock.json
-└── vercel.json
+## 
 
+*   **server/**
+    
+    *   **middlewares/**
+        
+        *   admin.js
+            
+        *   auth.js
+            
+    *   **models/**
+        
+        *   order.js
+            
+        *   product.js
+            
+        *   rating.js
+            
+        *   user.js
+            
+    *   **routes/**
+        
+        *   admin.js
+            
+        *   auth.js
+            
+        *   product.js
+            
+        *   user.js
+            
+    *   index.js
+        
+    *   package.json
+        
+    *   package-lock.json
+        
+    *   vercel.json
+        
 
 ### Flutter App (Frontend)
 
-lib/
-├─ common/
-│  └─ widgets/
-├─ constants/
-├─ features/
-│  ├─ account/
-│  ├─ address/
-│  ├─ admin/
-│  ├─ auth/
-│  ├─ cart/
-│  ├─ home/
-│  ├─ order/
-│  ├─ product_detail_screen/
-│  └─ search/
-├─ models/
-│  ├─ order_model.dart
-│  ├─ product_model.dart
-│  ├─ rating.dart
-│  └─ user.dart
-├─ providers/
-│  └─ user_provider.dart
-├─ main.dart
-└─ routes.dart
+## 
 
+*   **lib/**
+    
+    *   **common/**
+        
+        *   widgets/
+            
+    *   constants/
+        
+    *   **features/**
+        
+        *   account/
+            
+        *   address/
+            
+        *   admin/
+            
+        *   auth/
+            
+        *   cart/
+            
+        *   home/
+            
+        *   order/
+            
+        *   product\_detail\_screen/
+            
+        *   search/
+            
+    *   **models/**
+        
+        *   order\_model.dart
+            
+        *   product\_model.dart
+            
+        *   rating.dart
+            
+        *   user.dart
+            
+    *   **providers/**
+        
+        *   user\_provider.dart
+            
+    *   main.dart
+        
+    *   routes.dart
 
 
 ---
