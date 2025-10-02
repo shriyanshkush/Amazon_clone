@@ -68,53 +68,31 @@ server/
 
 ### Flutter App (Frontend)
 
-## 
-
-*   **lib/**
-    
-    *   **common/**
-        
-        *   widgets/
-            
-    *   constants/
-        
-    *   **features/**
-        
-        *   account/
-            
-        *   address/
-            
-        *   admin/
-            
-        *   auth/
-            
-        *   cart/
-            
-        *   home/
-            
-        *   order/
-            
-        *   product\_detail\_screen/
-            
-        *   search/
-            
-    *   **models/**
-        
-        *   order\_model.dart
-            
-        *   product\_model.dart
-            
-        *   rating.dart
-            
-        *   user.dart
-            
-    *   **providers/**
-        
-        *   user\_provider.dart
-            
-    *   main.dart
-        
-    *   routes.dart
+```text
+lib/
+├── common/
+│ └── widgets/
+├── constants/
+├── features/
+│ ├── account/
+│ ├── address/
+│ ├── admin/
+│ ├── auth/
+│ ├── cart/
+│ ├── home/
+│ ├── order/
+│ ├── product_detail_screen/
+│ └── search/
+├── models/
+│ ├── order_model.dart
+│ ├── product_model.dart
+│ ├── rating.dart
+│ └── user.dart
+├── providers/
+│ └── user_provider.dart
+├── main.dart
+└── routes.dart
+```
 
 
 ---
