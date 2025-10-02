@@ -44,20 +44,20 @@ A fully functional e-commerce platform built using **Flutter**, **Node.js**, and
 
 ### Server (Node.js & Express)
 
-## server/
+server/
 ├─ middlewares/
-│ ├─ admin.js
-│ └─ auth.js
+│  ├─ admin.js
+│  └─ auth.js
 ├─ models/
-│ ├─ order.js
-│ ├─ product.js
-│ ├─ rating.js
-│ └─ user.js
+│  ├─ order.js
+│  ├─ product.js
+│  ├─ rating.js
+│  └─ user.js
 ├─ routes/
-│ ├─ admin.js
-│ ├─ auth.js
-│ ├─ product.js
-│ └─ user.js
+│  ├─ admin.js
+│  ├─ auth.js
+│  ├─ product.js
+│  └─ user.js
 ├─ index.js
 ├─ package.json
 ├─ package-lock.json
@@ -66,29 +66,30 @@ A fully functional e-commerce platform built using **Flutter**, **Node.js**, and
 
 ### Flutter App (Frontend)
 
-##lib/
+lib/
 ├─ common/
-│ └─ widgets/
+│  └─ widgets/
 ├─ constants/
 ├─ features/
-│ ├─ account/
-│ ├─ address/
-│ ├─ admin/
-│ ├─ auth/
-│ ├─ cart/
-│ ├─ home/
-│ ├─ order/
-│ ├─ Product_detail_screen/
-│ └─ search/
+│  ├─ account/
+│  ├─ address/
+│  ├─ admin/
+│  ├─ auth/
+│  ├─ cart/
+│  ├─ home/
+│  ├─ order/
+│  ├─ product_detail_screen/
+│  └─ search/
 ├─ models/
-│ ├─ order_model.dart
-│ ├─ product_model.dart
-│ ├─ rating.dart
-│ └─ user.dart
+│  ├─ order_model.dart
+│  ├─ product_model.dart
+│  ├─ rating.dart
+│  └─ user.dart
 ├─ providers/
-│ └─ user_provider.dart
+│  └─ user_provider.dart
 ├─ main.dart
 └─ routes.dart
+
 
 
 ---
