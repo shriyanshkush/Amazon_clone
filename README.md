@@ -44,43 +44,26 @@ A fully functional e-commerce platform built using **Flutter**, **Node.js**, and
 
 ### Server (Node.js & Express)
 
-## 
-
-*   **server/**
-    
-    *   **middlewares/**
-        
-        *   admin.js
-            
-        *   auth.js
-            
-    *   **models/**
-        
-        *   order.js
-            
-        *   product.js
-            
-        *   rating.js
-            
-        *   user.js
-            
-    *   **routes/**
-        
-        *   admin.js
-            
-        *   auth.js
-            
-        *   product.js
-            
-        *   user.js
-            
-    *   index.js
-        
-    *   package.json
-        
-    *   package-lock.json
-        
-    *   vercel.json
+```text
+server/
+├── middlewares/
+│ ├── admin.js
+│ └── auth.js
+├── models/
+│ ├── order.js
+│ ├── product.js
+│ ├── rating.js
+│ └── user.js
+├── routes/
+│ ├── admin.js
+│ ├── auth.js
+│ ├── product.js
+│ └── user.js
+├── index.js
+├── package.json
+├── package-lock.json
+└── vercel.json
+```
         
 
 ### Flutter App (Frontend)
