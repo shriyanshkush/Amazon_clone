@@ -44,7 +44,7 @@ A fully functional e-commerce platform built using **Flutter**, **Node.js**, and
 
 ### Server (Node.js & Express)
 
-server/
+## server/
 ├─ middlewares/
 │ ├─ admin.js
 │ └─ auth.js
@@ -66,7 +66,7 @@ server/
 
 ### Flutter App (Frontend)
 
-lib/
+##lib/
 ├─ common/
 │ └─ widgets/
 ├─ constants/
